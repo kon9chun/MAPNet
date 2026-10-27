@@ -1,0 +1,15 @@
+{
+ "n_samples": 200,
+ "source": "test split (subset_indices.npz: test_reserved), every 10th case",
+ "shape": [
+  200,
+  40,
+  240
+ ],
+ "global_index_note": "demo_ids.npy stores the row index in the full 93,340-snapshot array",
+ "field_spread_K": {
+  "min": 0.004241943359375,
+  "median": 0.5301055908203125,
+  "max": 3.633514404296875
+ }
+}

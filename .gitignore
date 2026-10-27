@@ -1,0 +1,8 @@
+# outputs produced by the scripts
+runs/
+
+# python
+__pycache__/
+*.py[cod]
+*.tmp
+.DS_Store

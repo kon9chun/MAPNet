@@ -1,0 +1,162 @@
+{
+ "train_samples": 73340,
+ "validation_samples": 1000,
+ "test_samples": 2000,
+ "train_sigma_K": 0.05,
+ "rank": 16,
+ "batch_size": 256,
+ "max_epochs": 300,
+ "patience": 40,
+ "train_seed": 42,
+ "val_noise_seed": 77001,
+ "test_seeds": [
+  31001,
+  31002,
+  31003
+ ],
+ "test_sigmas_K": [
+  0.02,
+  0.05,
+  0.1,
+  0.2,
+  0.5
+ ],
+ "split_sha256": "9737563ef34ee286dbab8904e1cd76396009a71ece7cbac41d5b9c46761ac0db",
+ "script_sha256": "083568fac6ae4e375de056ec76609c01dcb8e4cef7af939f741b1ca6c8265758",
+ "configs": {
+  "pod16_noise": {
+   "kind": "pod16_clean",
+   "stages": [
+    {
+     "sigma_K": 0.05,
+     "lr": 0.001
+    }
+   ]
+  },
+  "deeponet_noise": {
+   "kind": "deeponet",
+   "stages": [
+    {
+     "sigma_K": 0.05,
+     "lr": 0.001
+    }
+   ]
+  },
+  "pod16_staged": {
+   "kind": "pod16_clean",
+   "stages": [
+    {
+     "sigma_K": 0.0,
+     "lr": 0.001
+    },
+    {
+     "sigma_K": 0.05,
+     "lr": 0.0001
+    }
+   ]
+  },
+  "cnn_small_noise": {
+   "kind": "cnn_small",
+   "stages": [
+    {
+     "sigma_K": 0.05,
+     "lr": 0.001
+    }
+   ]
+  },
+  "fno2d_noise": {
+   "kind": "fno2d",
+   "stages": [
+    {
+     "sigma_K": 0.05,
+     "lr": 0.001
+    }
+   ]
+  }
+ },
+ "protocol_hash": "f64ecb7de97b590e84a98e8389a39be50a4e693dd28373ac34b9dc05a941f7ef",
+ "protocol_fields": {
+  "train_samples": 73340,
+  "validation_samples": 1000,
+  "test_samples": 2000,
+  "train_sigma_K": 0.05,
+  "rank": 16,
+  "batch_size": 256,
+  "max_epochs": 300,
+  "patience": 40,
+  "train_seed": 42,
+  "val_noise_seed": 77001,
+  "test_seeds": [
+   31001,
+   31002,
+   31003
+  ],
+  "test_sigmas_K": [
+   0.02,
+   0.05,
+   0.1,
+   0.2,
+   0.5
+  ],
+  "split_sha256": "9737563ef34ee286dbab8904e1cd76396009a71ece7cbac41d5b9c46761ac0db",
+  "configs": {
+   "pod16_noise": {
+    "kind": "pod16_clean",
+    "stages": [
+     {
+      "sigma_K": 0.05,
+      "lr": 0.001
+     }
+    ]
+   },
+   "deeponet_noise": {
+    "kind": "deeponet",
+    "stages": [
+     {
+      "sigma_K": 0.05,
+      "lr": 0.001
+     }
+    ]
+   },
+   "pod16_staged": {
+    "kind": "pod16_clean",
+    "stages": [
+     {
+      "sigma_K": 0.0,
+      "lr": 0.001
+     },
+     {
+      "sigma_K": 0.05,
+      "lr": 0.0001
+     }
+    ]
+   },
+   "cnn_small_noise": {
+    "kind": "cnn_small",
+    "stages": [
+     {
+      "sigma_K": 0.05,
+      "lr": 0.001
+     }
+    ]
+   },
+   "fno2d_noise": {
+    "kind": "fno2d",
+    "stages": [
+     {
+      "sigma_K": 0.05,
+      "lr": 0.001
+     }
+    ]
+   }
+  }
+ },
+ "code_patches": [
+  {
+   "time": "2026-10-22 21:07:47",
+   "from_script_sha256": "647aed601db22d0944ed4bc9883c9ff21413db1366a4f1a41c763b12ba85d086",
+   "to_script_sha256": "083568fac6ae4e375de056ec76609c01dcb8e4cef7af939f741b1ca6c8265758",
+   "reason": "修复sigma=0时未保存clean_best导致两阶段读取失败；协议数据/结构/优化字段均未改动"
+  }
+ ]
+}

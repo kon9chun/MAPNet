@@ -1,0 +1,137 @@
+{
+  "environment": {
+    "gpu": "NVIDIA GeForce RTX 5060 Ti",
+    "compute_capability": "12.0",
+    "sm_count": 36,
+    "vram_GiB": 15.9,
+    "torch": "2.13.0+cu130",
+    "cuda_runtime": "13.0",
+    "cudnn": 92000,
+    "os": "Windows-11-10.0.26200-SP0",
+    "cpu": "Intel64 Family 6 Model 191 Stepping 2, GenuineIntel",
+    "dtype": "torch.float64",
+    "tf32": false
+  },
+  "rows": [
+    {
+      "config": "pod16_noise",
+      "label": "MAPNet",
+      "parameters": 102544,
+      "macs_per_sample": 255232.0,
+      "inference_peak_MiB": 473.90771484375,
+      "epochs": 291,
+      "steps_per_epoch": 287,
+      "train_seconds": 201.8682701587677,
+      "seconds_per_epoch": 0.6937053957345969,
+      "parameters_logged": 102544,
+      "latency_b2000": {
+        "batch": 2000,
+        "median_us_per_sample": 1.7195119857788086,
+        "mean_us_per_sample": 1.7620532017946244,
+        "median_us_per_call": 3439.023971557617
+      },
+      "latency_b1": {
+        "batch": 1,
+        "median_us_per_sample": 405.023992061615,
+        "mean_us_per_sample": 470.33603221178055,
+        "median_us_per_call": 405.023992061615
+      }
+    },
+    {
+      "config": "cnn_small_noise",
+      "label": "CNN",
+      "parameters": 105489,
+      "macs_per_sample": 8050816.0,
+      "inference_peak_MiB": 1497.68115234375,
+      "epochs": 247,
+      "steps_per_epoch": 287,
+      "train_seconds": 1341.2628259658813,
+      "seconds_per_epoch": 5.430213870307212,
+      "parameters_logged": 105489,
+      "latency_b2000": {
+        "batch": 2000,
+        "median_us_per_sample": 40.138601303100586,
+        "mean_us_per_sample": 40.084580402374264,
+        "median_us_per_call": 80277.20260620117
+      },
+      "latency_b1": {
+        "batch": 1,
+        "median_us_per_sample": 637.2799873352051,
+        "mean_us_per_sample": 712.5701432824135,
+        "median_us_per_call": 637.2799873352051
+      }
+    },
+    {
+      "config": "mlp_small_noise",
+      "label": "MLP",
+      "parameters": 107241,
+      "macs_per_sample": 97440.0,
+      "inference_peak_MiB": 472.16845703125,
+      "epochs": 284,
+      "steps_per_epoch": 287,
+      "train_seconds": 140.0840301513672,
+      "seconds_per_epoch": 0.49325362729354644,
+      "parameters_logged": 107241,
+      "latency_b2000": {
+        "batch": 2000,
+        "median_us_per_sample": 1.6652560234069824,
+        "mean_us_per_sample": 1.701938801407814,
+        "median_us_per_call": 3330.512046813965
+      },
+      "latency_b1": {
+        "batch": 1,
+        "median_us_per_sample": 253.31200659275055,
+        "mean_us_per_sample": 346.53795170783997,
+        "median_us_per_call": 253.31200659275055
+      }
+    },
+    {
+      "config": "deeponet_noise",
+      "label": "DeepONet",
+      "parameters": 51329,
+      "macs_per_sample": 239027456.0,
+      "inference_peak_MiB": 472.0283203125,
+      "epochs": 244,
+      "steps_per_epoch": 287,
+      "train_seconds": 144.59168028831482,
+      "seconds_per_epoch": 0.5925888536406345,
+      "parameters_logged": 51329,
+      "latency_b2000": {
+        "batch": 2000,
+        "median_us_per_sample": 2.189919948577881,
+        "mean_us_per_sample": 2.201026812791824,
+        "median_us_per_call": 4379.839897155762
+      },
+      "latency_b1": {
+        "batch": 1,
+        "median_us_per_sample": 318.59199702739716,
+        "mean_us_per_sample": 378.5334397852421,
+        "median_us_per_call": 318.59199702739716
+      }
+    },
+    {
+      "config": "fno2d_noise",
+      "label": "FNO",
+      "parameters": 84077,
+      "macs_per_sample": 10153344.0,
+      "inference_peak_MiB": 5820.7412109375,
+      "epochs": 178,
+      "steps_per_epoch": 287,
+      "train_seconds": 6160.929867506027,
+      "seconds_per_epoch": 34.61196554778667,
+      "parameters_logged": 167021,
+      "latency_b2000": {
+        "batch": 2000,
+        "median_us_per_sample": 149.42123413085938,
+        "mean_us_per_sample": 149.102114944458,
+        "median_us_per_call": 298842.46826171875
+      },
+      "latency_b1": {
+        "batch": 1,
+        "median_us_per_sample": 1739.8079633712769,
+        "mean_us_per_sample": 1991.5396484136581,
+        "median_us_per_call": 1739.8079633712769
+      }
+    }
+  ]
+}
