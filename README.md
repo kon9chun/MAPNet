@@ -90,7 +90,7 @@ three-panel figure are written to `runs/demo/`.
    python src/full_data_five_test.py --run
    ```
 
-   About 2.2 h in total on the platform above, of which MAPNet takes 202 s
+   About 2.3 h in total on the platform above, of which MAPNet takes 202 s
    (291 epochs, 0.69 s per epoch). Outputs go to `runs/full_data_five/`.
 
 3. **MLP baseline** (107,241 parameters, same protocol):
